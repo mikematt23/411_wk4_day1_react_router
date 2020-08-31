@@ -14,6 +14,18 @@ import { Switch, Route } from 'react-router'
 // Write component imports here //
 import About from './components/About'
 import Home from './components/Home'
+import Car from "./components/Car"
 
 
 // Start Router function here //
+const Router = ()=>{
+    return(
+        <Switch>
+            <Route path ='/' exact component ={Home} />
+            <Route path = "/About" component = {About} />
+            <Route path = "/cars/:id" component = {Car} />
+        </Switch>
+    )
+}
+
+export default Router
